@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bezikaron - Подписка на уход за надгробием</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Rubik', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f7f9fc;
@@ -23,8 +24,25 @@
             font-size: 24px;
             margin-bottom: 10px;
         }
+        .logo {
+            width: 120px;
+            margin-bottom: 10px;
+        }
         .container {
             padding: 15px;
+        }
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .services div {
+            background-color: #fff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .plan {
             background-color: #fff;
@@ -48,7 +66,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        form input, form select {
+        form input {
             width: 90%;
             padding: 8px;
             margin: 5px auto;
@@ -61,23 +79,29 @@
             color: white;
             font-size: 14px;
         }
-        .logo {
-            width: 120px;
-            margin-bottom: 10px;
-        }
         .faq {
             text-align: left;
             max-width: 600px;
             margin: 30px auto;
         }
-        .faq h2 {
-            text-align: center;
-        }
         .faq-item {
-            margin-bottom: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
         .faq-item h3 {
-            margin-bottom: 5px;
+            cursor: pointer;
+            padding: 10px;
+            margin: 0;
+            background-color: #0056b3;
+            color: white;
+        }
+        .faq-item p {
+            padding: 10px;
+            margin: 0;
+            display: none;
         }
     </style>
 </head>
@@ -89,12 +113,12 @@
 
     <div class="container">
         <h2>Что включает подписка?</h2>
-        <ul>
-            <li>Обновление и реставрация букв</li>
-            <li>Глубокая очистка надгробия</li>
-            <li>Регулярный уход и проверки</li>
-            <li>Фотоотчёты</li>
-        </ul>
+        <div class="services">
+            <div>🔹 Обновление и реставрация букв</div>
+            <div>🔹 Глубокая очистка надгробия</div>
+            <div>🔹 Регулярный уход и проверки</div>
+            <div>🔹 Фотоотчёты</div>
+        </div>
 
         <div class="plan">
             <img src="single.jpg" alt="Персональный памятник до и после">
@@ -121,65 +145,30 @@
             <button type="submit">Оплатить</button>
         </form>
 
-        <div style="margin-top: 30px;">
-            <div id="fb-root"></div>
-            <div class="fb-page" data-href="https://www.facebook.com/bezikaron" data-tabs="timeline, messages" data-width="" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                <blockquote cite="https://www.facebook.com/bezikaron" class="fb-xfbml-parse-ignore">
-                    <a href="https://www.facebook.com/bezikaron">Bezikaron</a>
-                </blockquote>
-            </div>
-        </div>
+        <div id="fb-root"></div>
+        <div class="fb-page" data-href="https://www.facebook.com/bezikaron" data-tabs="timeline, messages" data-height="500"></div>
 
         <div class="faq">
             <h2>Часто задаваемые вопросы (FAQ)</h2>
-            <div class="faq-item">
-                <h3>В каких городах работает Bezikaron?</h3>
-                <p>Мы работаем по всему Израилю — от севера до юга.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Как вы найдете нужный памятник?</h3>
-                <p>У нас есть полная база памятников и захоронений по всему Израилю.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Можно ли отменить подписку?</h3>
-                <p>Вы можете отменить подписку в любой момент — свяжитесь с персональным менеджером.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Как часто происходит обслуживание?</h3>
-                <p>Регулярные проверки и обслуживание проводятся несколько раз в год согласно тарифу.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Как можно оплатить подписку?</h3>
-                <p>Оплатить можно любой банковской картой, Apple Pay или Google Pay.</p>
-            </div>
+            <div class="faq-item"><h3 onclick="toggleFaq(this)">Где мы работаем?</h3><p>По всему Израилю.</p></div>
+            <div class="faq-item"><h3 onclick="toggleFaq(this)">Как мы найдем памятник?</h3><p>У нас полная база памятников в Израиле.</p></div>
+            <div class="faq-item"><h3 onclick="toggleFaq(this)">Как отменить подписку?</h3><p>Свяжитесь с персональным менеджером.</p></div>
         </div>
 
     </div>
 
     <footer>
-        <p>© Bezikaron 2025 | Телефон: 054-7310054 | Email: info@bezikaron.co.il</p>
+        © Bezikaron 2025 | Телефон: 054-7310054 | Email: info@bezikaron.co.il
     </footer>
 
     <script>
         function openForm(plan, price) {
             document.getElementById('subscriptionForm').style.display = 'block';
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         }
-
-        document.getElementById('subscriptionForm').addEventListener('submit', function(e){
-            e.preventDefault();
-            alert('Спасибо! Ваша подписка оформлена. Скоро с вами свяжется персональный менеджер.');
-            document.getElementById('subscriptionForm').reset();
-            document.getElementById('subscriptionForm').style.display = 'none';
-        });
-
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+        function toggleFaq(el) {
+            const p = el.nextElementSibling;
+            p.style.display = p.style.display === 'block' ? 'none' : 'block';
+        }
     </script>
 </body>
 </html>
