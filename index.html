@@ -152,14 +152,18 @@
             <button type="submit">Оплатить</button>
         </form>
 
-        <div id="fb-root"></div>
-        <div class="fb-page" data-href="https://www.facebook.com/bezikaron" data-tabs="timeline, messages" data-height="500"></div>
-
         <div class="faq">
             <h2>Часто задаваемые вопросы (FAQ)</h2>
             <div class="faq-item"><h3 onclick="toggleFaq(this)">Где мы работаем?</h3><p>По всему Израилю.</p></div>
             <div class="faq-item"><h3 onclick="toggleFaq(this)">Как мы найдем памятник?</h3><p>У нас полная база памятников в Израиле.</p></div>
             <div class="faq-item"><h3 onclick="toggleFaq(this)">Как отменить подписку?</h3><p>Свяжитесь с персональным менеджером.</p></div>
+        </div>
+
+        <div id="fb-root"></div>
+        <div class="fb-page" data-href="https://www.facebook.com/bezikaron" data-tabs="timeline, messages, reviews" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/bezikaron" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/bezikaron">Bezikaron</a>
+            </blockquote>
         </div>
 
     </div>
@@ -177,5 +181,6 @@
             p.style.display = p.style.display === 'block' ? 'none' : 'block';
         }
     </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v18.0" nonce="u1cVY2Fz"></script>
 </body>
 </html>
