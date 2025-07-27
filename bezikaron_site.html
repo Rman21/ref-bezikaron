@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bezikaron - Подписка на уход за надгробием</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .container {
+            padding: 15px;
+        }
+        .plan {
+            background-color: #fff;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 300px;
+        }
+        button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form input, form select {
+            width: 90%;
+            padding: 8px;
+            margin: 5px auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        footer {
+            padding: 10px;
+            background-color: #0056b3;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bezikaron - Забота о памяти близких круглый год</h1>
+    </header>
+
+    <div class="container">
+        <h2>Что включает подписка?</h2>
+        <ul>
+            <li>Обновление и реставрация букв</li>
+            <li>Глубокая очистка надгробия</li>
+            <li>Регулярный уход и проверки</li>
+            <li>Фотоотчёты</li>
+        </ul>
+
+        <div class="plan">
+            <h3>Персональный памятник</h3>
+            <p>49 ₪ / месяц</p>
+            <button onclick="openForm('Персональный памятник',49)">Оформить</button>
+        </div>
+
+        <div class="plan">
+            <h3>Семейный памятник</h3>
+            <p>89 ₪ / месяц</p>
+            <button onclick="openForm('Семейный памятник',89)">Оформить</button>
+        </div>
+
+        <form id="subscriptionForm" style="display:none;">
+            <h3>Оформление подписки</h3>
+            <input type="text" placeholder="ФИО заказчика" required>
+            <input type="tel" placeholder="Телефон" required>
+            <input type="email" placeholder="Электронная почта">
+            <input type="text" placeholder="Адрес кладбища" required>
+            <input type="text" placeholder="ФИО усопшего">
+            <input type="text" placeholder="Реферальный код">
+            <button type="submit">Оплатить</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© Bezikaron 2025 | Телефон: 054-7310054 | Email: info@bezikaron.co.il</p>
+    </footer>
+
+    <script>
+        function openForm(plan, price) {
+            document.getElementById('subscriptionForm').style.display = 'block';
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        document.getElementById('subscriptionForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            alert('Спасибо! Ваша подписка оформлена. Скоро с вами свяжется персональный менеджер.');
+            document.getElementById('subscriptionForm').reset();
+            document.getElementById('subscriptionForm').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
