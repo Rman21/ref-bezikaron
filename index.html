@@ -34,6 +34,12 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             max-width: 300px;
         }
+        .plan img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
         button {
             background-color: #0056b3;
             color: white;
@@ -59,13 +65,10 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Bezikaron Logo" width="120">
         <h1>Bezikaron - Забота о памяти близких круглый год</h1>
     </header>
 
     <div class="container">
-        <img src="photo.jpg" alt="Памятник после реставрации" width="300">
-
         <h2>Что включает подписка?</h2>
         <ul>
             <li>Обновление и реставрация букв</li>
@@ -75,12 +78,14 @@
         </ul>
 
         <div class="plan">
+            <img src="single.jpg" alt="Персональный памятник до и после">
             <h3>Персональный памятник</h3>
             <p>49 ₪ / месяц</p>
             <button onclick="openForm('Персональный памятник',49)">Оформить</button>
         </div>
 
         <div class="plan">
+            <img src="double.jpg" alt="Семейный памятник до и после">
             <h3>Семейный памятник</h3>
             <p>89 ₪ / месяц</p>
             <button onclick="openForm('Семейный памятник',89)">Оформить</button>
